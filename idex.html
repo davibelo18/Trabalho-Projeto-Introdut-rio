@@ -1,0 +1,66 @@
+<<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex box Tigrinho Amigo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Tigrinho amigo</h1>
+    <img height="140" width="200" src="img.jpg" alt="Logo do site">
+  </header>
+
+  <!-- Menu -->
+  <nav>
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <section class="conteudo">
+      <h2>Bem-vindo ao meu site</h2>
+      <p>Onde seu depósito é minha felicidade, e sua perda é tua tristeza.</p>
+      <p>Aqui, a sorte está do seu lado! Nosso site foi criado para trazer diversão, emoção e aquela sensação de adrenalina que só o giro de uma carta pode proporcionar.</p>
+      <p>Aqui jogamos como familia, nada de trapaças e brincadeiras, aposte um pouco e ganhe dobrado.</p>
+      <p>Clique no tigrinho para ele soltar sua cartinha. </p>
+      <p>Lembre-se: jogue com responsabilidade e aproveite cada momento. A sorte pode estar a um clique de distância!</p>
+    </section>
+
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+      <h2>Barra Lateral</h2>
+      <p>Deposite 50 para ganhar um giro grátis.</p>
+      <p>Convide 5 amigos para ganhar um bônus de 30 reais.</p>
+      <p>Jogue e se divirta, com moderação.</p>
+    </aside>
+  </main>
+
+  <!-- Tigrinho que solta carta -->
+  <div class="container-tigrinho" onclick="soltarCarta()">
+    <img src="tigrinho.jpg" alt="Tigrinho" class="tigrinho" width="100" height="100">
+    <img src="carta.jpg" alt="Carta" class="carta" width="100" height="100">
+  </div>
+
+  <script>
+    function soltarCarta() {
+      const container = document.querySelector('.container-tigrinho');
+      container.classList.add('ativo');
+      setTimeout(() => {
+        container.classList.remove('ativo');
+      }, 1200);
+    }
+  </script>
+</body>
+
+</html>
+

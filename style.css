@@ -1,0 +1,121 @@
+
+
+
+
+
+/* Estilo geral do corpo */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(249, 232, 38);
+  margin: 0;
+  padding-bottom: 80px; /* espaço pro footer fixo */
+}
+
+/* Cabeçalho */
+header {
+  background-color: rgba(255, 149, 0, 0.941);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Menu de navegação */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Layout principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 20px;
+}
+
+/* Conteúdo principal */
+.conteudo {
+  flex: 2;
+  background-color: black;
+  color: aliceblue;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Barra lateral */
+.sidebar {
+  flex: 1;
+  background-color: #ffd54f;
+  padding: 20px;
+  border-radius: 8px;
+  color: black;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Tigrinho que solta carta */
+.container-tigrinho {
+  position: relative;
+  width: 120px;
+  margin: 40px auto;
+  cursor: pointer;
+}
+
+.tigrinho {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+}
+
+.carta {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  width: 80px;
+  opacity: 0;
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+
+.container-tigrinho.ativo .carta {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-130px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .conteudo,
+  .sidebar {
+    width: 100%;
+  }
+}
