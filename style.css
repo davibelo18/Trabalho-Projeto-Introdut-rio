@@ -14,7 +14,7 @@ body {
 /* Cabeçalho */
 header {
   background-color: rgba(255, 149, 0, 0.941);
-  color: white;
+  color: black;
   text-align: center;
   padding: 20px;
 }
